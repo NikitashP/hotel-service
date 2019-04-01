@@ -21,7 +21,7 @@ public class HotelQueryHandler {
         this.hotelRepository = hotelRepository;
     }
 
-    public Hotel getAvailableRooms(String hotelId) {
+    public Hotel findHotel(String hotelId) {
         return hotelRepository.findById(hotelId).orElseThrow(() -> new IllegalArgumentException("unable to find hotel with this Id"));
 
     }

@@ -48,7 +48,7 @@ public class HotelController {
 
     @GetMapping("/hotel/{id}")
     public Hotel getHotel(@NonNull @PathVariable("id") String hotelId){
-        return hotelQueryHandler.getAvailableRooms(hotelId);
+        return hotelQueryHandler.findHotel(hotelId);
     }
 
     @GetMapping("/events/{id}")
